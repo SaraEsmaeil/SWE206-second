@@ -1,6 +1,8 @@
 public class Sorter {
     public static void main(String args){
-
+        public void sort (Array[] arr){
+            insertionSort({1,10,15,7,9});
+        }
     }
     public static void selectionSort(int[] arr){
         for (int i = 0; i < arr.length - 1; i++)
@@ -16,23 +18,16 @@ public class Sorter {
             arr[i] = smallerNumber;
         }
     }
-    void insertionSort(int arr[], int n)
-    {
-        int i, key, j;
-        for (i = 1; i < n; i++) {
-            key = arr[i];
-            j = i - 1;
-
-            // Move elements of arr[0..i-1],
-            // that are greater than key,
-            // to one position ahead of their
-            // current position
-            while (j >= 0 && arr[j] > key) {
-                arr[j + 1] = arr[j];
-                j = j - 1;
+    public static void insertionSort(int array[]) {
+        int n = array.length;
+        for (int j = 1; j < n; j++) {
+            int key = array[j];
+            int i = j-1;
+            while ( (i > -1) && ( array [i] > key ) ) {
+                array [i+1] = array [i];
+                i--;
             }
-            arr[j + 1] = key;
+            array[i+1] = key;
         }
     }
-
 }
