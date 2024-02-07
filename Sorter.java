@@ -1,5 +1,8 @@
 public class Sorter {
     public static void main(String args){
+        public static void sort(int[] array){
+            selectionSort({2,10,25,9,28});
+        }
         
     }
     public static void selectionSort(int[] arr){
@@ -16,5 +19,6 @@ public class Sorter {
             arr[i] = smallerNumber;
         }
     }
+
 
 }
